@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biscuit Soak Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <h1>Biscuit Soak Timer</h1>
+  <p class="lead">Pick a biscuit, dip it in tea, and get notified when it's perfectly soaked.</p>
+  
+  <div class="controls">
+    <div>
+      <label for="biscuit">Biscuit type</label>
+      <select id="biscuit">
+        <option value="5">Parle-G — 5s</option>
+        <option value="6">Marie — 6s</option>
+        <option value="7">Digestive — 7s</option>
+        <option value="8">Glucose — 8s</option>
+        <option value="9">Oatmeal — 9s</option>
+        <option value="7">Bourbon — 7s</option>
+      </select>
+    </div>
+    <div>
+      <label for="customTime">Custom soak time (seconds)</label>
+      <input id="customTime" type="number" min="1" placeholder="Optional" />
+    </div>
+  </div>
+  
+  <div class="timer">
+    <div class="time-circle" id="displayTime">00:00</div>
+    <div class="progress-wrap">
+      <div class="progress-bar">
+        <div class="progress-inner" id="progressInner"></div>
+      </div>
+      <div class="status" id="statusText">Ready — choose and press Start.</div>
+    </div>
+  </div>
+  
+  <div class="actions">
+    <button id="startBtn" class="small">Start</button>
+    <button id="pauseBtn" class="small" disabled>Pause</button>
+    <button id="resetBtn" class="small" disabled>Reset</button>
+    <label style="display:flex; align-items:center; gap:6px;">
+      <input type="checkbox" id="soundToggle" checked /> Sound
+    </label>
+  </div>
+  
+  <div class="finished" id="finishedBox">Done! Time to take your biscuit out.</div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
